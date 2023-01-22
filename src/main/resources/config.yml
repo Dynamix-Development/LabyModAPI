@@ -1,0 +1,19 @@
+Options:
+  TabImage:
+    Enabled: true
+    ImageLink: "https://media.discordapp.net/attachments/949343573751517224/1066721219237384192/NBTC.png"
+  LabyModChatGameModePlaying:
+    Enabled: true
+    Playing: "&4ServerName - &cLobby"
+  Cinematic:
+    PlayOnJoin: true
+    CinceScope: true
+    Sound: true
+    DurationInLong: 10000
+    GameModeBefore: SPECTATOR
+    GameModeAfter: ADVENTURE
+    Title:
+      Enabled: true
+      TitleMessage: "&cWelcome to SERVER"
+      SubTitleMessage: "&7PLAY.MYSERVER.COM"
+

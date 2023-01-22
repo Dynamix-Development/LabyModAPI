@@ -1,0 +1,8 @@
+name: LabyHelper-LabyModAPI
+version: '${project.version}'
+main: me.nbtc.dev.labymodapi.Main
+api-version: 1.15
+authors: [ NBTC ]
+description: Custom tab image, custom currency on screen, and many more!
+commands:
+  laby:
