@@ -1,9 +1,11 @@
 package me.nbtc.dev.labymodapi;
 
 
+import me.clip.placeholderapi.PlaceholderAPI;
 import me.nbtc.dev.labymodapi.cmds.Laby;
 import me.nbtc.dev.labymodapi.labyhook.LabyModChatGameMode;
 import me.nbtc.dev.labymodapi.labyhook.TabImage;
+import me.nbtc.dev.labymodapi.labyhook.VoiceChat;
 import me.nbtc.dev.labymodapi.labyhook.cinematic.BlackScreen;
 import me.nbtc.dev.labymodapi.labyhook.cinematic.CinematicView;
 import me.nbtc.dev.labymodapi.labyhook.cinematic.CinematicYAML;
@@ -23,6 +25,7 @@ public final class Main extends JavaPlugin {
     private BlackScreen blackScreen;
     private TabImage tabImage;
     private LabyModChatGameMode labyModChatGameMode;
+    private VoiceChat voiceChat;
     @Override
     public void onEnable() {
         init();
@@ -62,12 +65,19 @@ public final class Main extends JavaPlugin {
         blackScreen = new BlackScreen();
         tabImage = new TabImage();
         labyModChatGameMode = new LabyModChatGameMode();
+        voiceChat = new VoiceChat();
     }
     private void listeners(){
         getServer().getPluginManager().registerEvents(new Connect(),this);
     }
     private void cmds(){
         getCommand("laby").setExecutor(new Laby());
+    }
+    public void placeholderFix(String toFix){
+        PlaceholderAPI.setPlaceholders(null, toFix);
+    }
+    public void placeholderFix(Player player, String toFix){
+        PlaceholderAPI.setPlaceholders(player, toFix);
     }
     public static Main getInstance() {
         return instance;
@@ -84,6 +94,11 @@ public final class Main extends JavaPlugin {
     public TabImage getTabImage() {
         return tabImage;
     }
+
+    public VoiceChat getVoiceChat() {
+        return voiceChat;
+    }
+
     public LabyModChatGameMode getLabyModChatGameMode() {
         return labyModChatGameMode;
     }

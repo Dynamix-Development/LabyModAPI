@@ -16,4 +16,18 @@ Options:
       Enabled: true
       TitleMessage: "&cWelcome to SERVER"
       SubTitleMessage: "&7PLAY.MYSERVER.COM"
+  VoiceChat: #NEW
+    AskOnJoin: true
+    MicrophoneVolume:
+      Limited: true
+      Limit: 10
+    SurroundRange:
+      Limited: true
+      Limit: 10
+    SurroundVolume:
+      Limited: true
+      Limit: 10
+
+
+
 

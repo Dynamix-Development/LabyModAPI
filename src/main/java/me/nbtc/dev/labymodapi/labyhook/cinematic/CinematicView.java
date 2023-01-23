@@ -37,6 +37,9 @@ public class CinematicView {
                 player.setGameMode(GameMode.valueOf(Main.getInstance().getConfig().getString("Options.Cinematic.GameModeAfter")));
                 player.setAllowFlight(false);
                 player.setFlying(false);
+                if (Main.getInstance().getConfig().getBoolean("Options.VoiceChat.AskOnJoin")){
+                    Main.getInstance().getVoiceChat().sendSettings(player, true, true);
+                }
                 running[0] =false;
             }
         }.runTaskLater(Main.getInstance(), duration/50);
